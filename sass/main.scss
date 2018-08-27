@@ -1,0 +1,92 @@
+$full-size: 100%;
+$color-primary: #f9ed69;//yellow color
+$color-secondary: #f08a5d;//orange color
+$color-tertiary: #32373b;
+$text-color-gray: #333;
+$text-color-light: #eee;
+$backgorund-color-light: #edf0f1;
+$color-blue: #4285f4;
+$color-white: #fff;
+$color-green: rgb(10,238,10);
+$color-red: rgb(241,44,9);
+$width-button: 100px;
+@mixin btn-style($width, $margin-top) { 
+    padding: 10px;
+    margin-top: $margin-top;
+    font-weight: 700;
+    text-align: center;
+    width: $width;
+    border-radius: $width-button;
+    background-color: $color-tertiary;
+    color: #eee;
+    outline: none;
+    cursor: pointer;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial,sans-serif;
+}
+.divider {
+    width: 100%;
+    background-color: $text-color-gray;
+    height: 3px;
+    margin: 50px 0;
+}
+body {
+    min-height: 100%;
+    position: relative;
+}
+.wrapper {
+    width:60%;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    .container {
+        form {
+        background-color: $backgorund-color-light;
+        padding: 50px;
+        input{
+            width: 100%;
+            padding: 14px 7px;
+            margin: 25px 0 0;
+            font-size: 16px;
+               border: 0;
+              border-radius: 2px;
+              box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+            outline: none
+          } 
+        button.submit {
+            @include btn-style($full-size, 30px)
+}
+        }
+.section-two {
+  margin: 100px 0;  
+}
+
+.bookmark-item {
+    padding: 50px 20px;
+    background-color:$backgorund-color-light;
+    margin: 10px 0;  
+    .btn {
+        @include btn-style($width-button, 0);
+        float: right;
+        text-decoration: none;
+        margin: 0 10px
+    }
+    .delete {
+        background-color: $color-red;
+    }
+}
+
+    }
+}
+footer {
+    padding: 20px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    color: $text-color-light;
+    background-color: $color-tertiary;
+    font-weight: 700
+}
